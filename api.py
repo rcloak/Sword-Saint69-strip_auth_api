@@ -12,7 +12,6 @@ import psycopg2.extras
 from datetime import datetime
 import os
 import sys
-from contextlib import asynccontextmanager
 
 from seymour_duncan import SeymourDuncanGateway
 
@@ -268,7 +267,7 @@ PAGE_HTML = """<!DOCTYPE html>
 <!-- HERO -->
 <div class="hero">
   <div class="brand">LEVIATHAN</div>
-  <div class="tagline">Stripe Auth Intelligence API</div>
+  <div class="tagline">Stripe Auth  API</div>
   <div class="coder">CODER: @COMMANDO69</div>
 </div>
 
@@ -277,7 +276,7 @@ PAGE_HTML = """<!DOCTYPE html>
 <div class="content">
 
   <h2><i data-lucide="info"></i> Overview</h2>
-  <p>LEVIATHAN is a high-performance card-auth checking API powered by the Seymour Duncan gateway. Submit card details via GET or POST — live and approved results are persisted to the database; declined cards are not stored.</p>
+  <p>LEVIATHAN is a high-performance card-auth checking API </p>
 
   <!-- ────────── ENDPOINTS ────────── -->
   <h2><i data-lucide="terminal"></i> Endpoints</h2>
