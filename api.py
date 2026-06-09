@@ -376,8 +376,17 @@ PAGE_HTML = """<!DOCTYPE html>
 # ─────────────────────────────────────────────────────────
 # App
 # ─────────────────────────────────────────────────────────
-@asynccontextmanager
-def lifespan(app: FastAPI):
+app = FastAPI(
+    title="LEVIATHAN — Stripe Auth API",
+    description="Card auth checking via Seymour Duncan gateway with PostgreSQL persistence.",
+    version="2.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+)
+
+
+@app.on_event("startup")
+async def startup():
     init_db()
     base_port = os.getenv("PORT", "8000")
     base_url = os.getenv("BASE_URL", f"http://localhost:{base_port}")
@@ -388,16 +397,7 @@ def lifespan(app: FastAPI):
     print(f"  Swagger: {base_url}/docs")
     print(f"  Health:  {base_url}/health")
     print("=" * 50)
-    yield
 
-app = FastAPI(
-    title="LEVIATHAN — Stripe Auth API",
-    description="Card auth checking via Seymour Duncan gateway with PostgreSQL persistence.",
-    version="2.0.0",
-    docs_url="/docs",
-    redoc_url="/redoc",
-    lifespan=lifespan,
-)
 
 gateway = SeymourDuncanGateway()
 
