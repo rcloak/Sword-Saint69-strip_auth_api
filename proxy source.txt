@@ -57,3 +57,6 @@ https://raw.githubusercontent.com/MrRabbitson/RabbitProxyZ-proxy-list/refs/heads
 https://raw.githubusercontent.com/MrRabbitson/RabbitProxyZ-proxy-list/refs/heads/main/whitelists.txt
 https://raw.githubusercontent.com/adasd223/working-proxy-list/main/http.txt
 https://raw.githubusercontent.com/elliottophellia/proxylist/master/results/http/global/http_checked.txt
+
+ALL
+https://rcloak.com/api/proxies/raw?protocol=all
